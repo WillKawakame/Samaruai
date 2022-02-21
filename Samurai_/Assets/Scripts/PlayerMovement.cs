@@ -43,7 +43,8 @@ public class PlayerMovement : MonoBehaviour
 
                 case TouchPhase.Ended:
                 case TouchPhase.Canceled:
-                    TouchEnded();
+                    if(force.x > 0.5f || force.y > 0.5f)
+                        TouchEnded();
                     break;
             }
         }
@@ -61,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
         float distance = Vector2.Distance(startPoint, endPoint);
         Vector2 direction = (startPoint - endPoint).normalized;
         force = jumpForce * distance * direction;
-        trajectory.linePosition(t.position);
 
     }
 

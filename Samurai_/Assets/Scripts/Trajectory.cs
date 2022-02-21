@@ -12,10 +12,9 @@ public class Trajectory : MonoBehaviour
 
     }
     
-    public void linePosition(Vector2 pos){
+    public void linePosition(){
 
-        line.SetPosition(0, transform.position);
-        line.SetPosition(1, pos);
+        
 
     }
 }
