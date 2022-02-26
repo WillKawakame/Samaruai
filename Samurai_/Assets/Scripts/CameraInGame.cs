@@ -22,12 +22,11 @@ public class CameraInGame : MonoBehaviour
 
     private void CheckPlayerHeight(){
 
-        if(player.transform.position.y >= heightestPoint){
+        if(player.transform.position.y - 1.5f >= heightestPoint){
 
-            heightestPoint = player.transform.position.y;
+            heightestPoint = player.transform.position.y - 1.5f;
             transform.position = new Vector3(transform.position.x, heightestPoint, transform.position.z);
 
         }
-
     }
 }
