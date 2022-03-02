@@ -8,6 +8,8 @@ public class CameraInGame : MonoBehaviour
 
     float heightestPoint;
 
+    public float height;
+
     private void Awake() { 
 
         player = GameObject.FindGameObjectWithTag("Player");
@@ -24,7 +26,7 @@ public class CameraInGame : MonoBehaviour
 
         if(player.transform.position.y - 1.5f >= heightestPoint){
 
-            heightestPoint = player.transform.position.y - 1.5f;
+            heightestPoint = player.transform.position.y - height;
             transform.position = new Vector3(transform.position.x, heightestPoint, transform.position.z);
 
         }
